@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<title>Resume</title>
+	<style>
+td {
+    border-bottom: 6px solid black;
+}
+p.one {
+    border-style: double;
+    border-width: 15px;
+    background-color: lightgreen;
+    font-size: 120%;
+}
+p.two {
+    color:red;
+    text-align: center;
+}
+p.three {
+    color:blue;
+    text-align: center;
+}
+p.four {
+    color:green;
+    text-align: center;
+}
+p.five {
+    color:orange;
+    text-align: center;
+}
+h4{
+	left: 20%;
+	font-style: italic;
+	text-align: center;
+}
+.center { 
+    position: relative;
+    left: 40%;
+    font-style: italic;
+    text-decoration: underline;
+
+}
+th.one{
+	color: red;
+	}
+th.two{
+	color: orange;
+	}
+th.three{
+	color: blue;
+	}
+	
+</style>
+</head>
+<body>
+	<div class="container" ng-controller="AppCtrl">
+		<h1 class="center">Resume</h1>
+		<p class="one">Hello, my name is Jurelly Tello. This is my third year at Cal State LA. I am a very hardworking 
+		student. I consider myself a team player, I like to work as a group because everyone can input their own ideas.
+		After I graduate I will be looking for a job in the computer science field.
+		This is my resume where I'll be putting my personal information. 
+  </p>
+		<table class="table">
+		<thead>
+    <tr>
+    <th class="one">Education</th>
+    <th class="two">Skills</th>
+    <th class="three">Projects</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="res in resume" class="info">
+    <td>{{res.edu}}</td>
+    <td>{{res.skill}}</td>
+    <td>{{res.projects}}</td>
+  </tbody>
+    </table>	
+	</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="controllers/controllers.js"></script>
+<h4>Contact Information</h4>
+<p class="two">Name: Jurelly Tello</p>
+<p class="three">Number: (760)294-5678</p>
+<p class="four">Address: 123 North Pole, Los Angeles, CA, 92027</p>
+<p class="five">Email: jtello9@calstatela.edu</p>
+</body>
+</html>
