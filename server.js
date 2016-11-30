@@ -24,13 +24,13 @@ app.get('/resume', function (req, res) {
 //   });
 // });
 // 	
-// app.delete('/resume/:id',function(req,res){
-// 	var id = req.params.id;
-// 	console.log(id);
-// 	db.resume.remove({_id: mongojs.ObjectId(id)},function(err, doc) {
-//     res.json(doc);
-//   });
-//   });
+app.delete('/resume/:id',function(req,res){
+	var id = req.params.id;
+	console.log(id);
+	db.resume.remove({_id: mongojs.ObjectId(id)},function(err, doc) {
+    res.json(doc);
+  });
+  });
 //   
 // app.put('/resume/:id', function (req, res) {
 //   var id = req.params.id;
